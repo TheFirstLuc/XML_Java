@@ -28,8 +28,6 @@ class Feedback {
                 Node node = childNodes.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    // Hier kannst du weitere Logik hinzufügen, um die gewünschten Informationen aus den Elementen zu extrahieren
-                    // Hier wird einfach der Tag-Name als Schlüssel und der Text-Inhalt als Wert in die HashMap eingefügt
                     childrenMap.put(element.getTagName(), element.getTextContent());
                 }
             }
@@ -59,5 +57,7 @@ class Feedback {
     public double calculateReturningVisitorsPercentage(){
         return 0;
     }
+
+
 
 }
