@@ -53,7 +53,7 @@ public class XMLWriter {
                     feedbackElement.appendChild(besucherElement);
 
                     Element bewertungElement = doc.createElement("bewertung");
-                    bewertungElement.setAttribute("erneuter_besuch", fb.get("wiederbesuchen").isEmpty() ? "nein" : "ja");
+                    bewertungElement.setAttribute("erneuter_besuch", fb.get("wiederbesuchen") == null || fb.get("wiederbesuchen").isEmpty() ? "nein" : "ja");
                     bewertungElement.setAttribute("note_inhalt", noteInhaltUmrechnen(fb.get("note_inhalt")));
                     bewertungElement.setAttribute("note_aussehen", fb.get("note_aussehen"));
 
