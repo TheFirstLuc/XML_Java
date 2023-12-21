@@ -77,6 +77,11 @@ public class XMLWriter {
                     uhrzeitElement.setTextContent(fb.get("datum").split("_")[1]);
                     infoElement.appendChild(uhrzeitElement);
 
+                    //title added
+                    Element title = doc.createElement("title");
+                    title.setTextContent("Feedback" + fb.get("datum").replace(".", "_").replace(":", "_"));
+                    infoElement.appendChild(title);
+
                     feedbackElement.appendChild(infoElement);
 
                     rootElement.appendChild(feedbackElement);
